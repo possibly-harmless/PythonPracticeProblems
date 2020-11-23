@@ -53,3 +53,23 @@ The implementation should use recursion, loops are not allowed. Performance is n
 Examples of use:
 
     count_runs([1, 1, 2, 2, 2, 3, 4, 4, 4, 4, 4, 5, 5]) --> [2, 3, 1, 5, 2]
+
+
+#### 3. Positions of a sublist in a list
+
+Preprequisites
+- Joining lists with `+`
+- List indexing, e.g. `lst[start:]` or `lst[:end]`
+
+The problem
+
+Write a function `sequence_position(lst, seq, start=0)` which takes a list `lst`, a sublist `seq`, and an optional `start` argument, which is the starting position of element in `lst`. It should return a list of starting positions of entries of `seq` inside `lst`.
+
+The implementation should use recursion, loops are not allowed. 
+
+ Hint: you actually need the thrid optional argument `start` to set up the recursion, which is the main reason it appears in the function's signature in the spec.
+
+Examples of use:
+
+    sequence_position([1, 2, 2, 3, 1, 3, 5, 4, 2, 6, 7, 5, 3, 1, 3], [3,1,3]) -->   [3, 12]
+

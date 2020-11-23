@@ -7,8 +7,6 @@
 # can become pretty large.
 
 # 1.A.1 - List filtering
-
-
 def list_filter(lst, pred):
     if not lst:
         return []
@@ -19,6 +17,7 @@ def list_filter(lst, pred):
         return list_filter(rest, pred)
 
 
+# 1.A.2 - Consecutive elements runs lengths
 def count_runs(lst):
     if not lst:
         return []
@@ -28,3 +27,13 @@ def count_runs(lst):
             if elem != fst:
                 return [index + 1] + count_runs(rest[index:])
         return [len(lst)]
+
+
+# 1.A.3 - Positions of a subsequence in a list
+def sequence_position(lst, seq, start=0):
+    if not seq or not lst or len(seq) > len(lst) - start:
+        return []
+    if lst[start : len(seq) + start] == seq:
+        return [start] + sequence_position(lst, seq, start + 1)
+    else:
+        return sequence_position(lst, seq, start + 1)
