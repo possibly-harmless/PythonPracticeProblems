@@ -2,7 +2,9 @@
 # since we use python lists here, while linked lists would be a better
 # structure to use for such recursive solutions.
 #
-# Note also that such implementations
+# Note also that such implementations are prone to stack overflow, since
+# when recursion is used as a substitute for a loop, the recursion depth
+# can become pretty large.
 
 # 1.A.1 - List filtering
 
