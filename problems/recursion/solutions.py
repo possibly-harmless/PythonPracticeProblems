@@ -17,3 +17,14 @@ def list_filter(lst, pred):
         return [fst] + list_filter(rest, pred)
     else:
         return list_filter(rest, pred)
+
+
+def count_runs(lst):
+    if not lst:
+        return []
+    else:
+        fst, *rest = lst
+        for index, elem in enumerate(rest):
+            if elem != fst:
+                return [index + 1] + count_runs(rest[index:])
+        return [len(lst)]

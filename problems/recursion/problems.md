@@ -32,3 +32,24 @@ Examples of use:
         ["ciaos", "pools", "nones", "mashed", "braes", "trip", "harry", "kooked", "mavens", "arrow"], 
         lambda word: "o" in word
     ) --> ['ciaos', 'pools', 'nones', 'kooked', 'arrow']
+
+
+#### 2.  Lengths of runs of same elements in a list   
+
+Prerequisites
+ - List unpacking, e.g. `fst, *rest = list` and the like
+ - Joining lists with `+`
+ - List indexing, e.g. `lst[start:]` or `lst[:end]`
+ - `enumerate()` (optional)
+
+
+The problem
+
+Write a function `count_runs(lst)`, which would take a list of elements (restricted for a purpose of this problem to types which 
+can be compared with `==` operator, e.g. numbers, strings, etc.), and return a list of lengths of consecutive runs of the same elements in a list.
+
+The implementation should use recursion, loops are not allowed. Performance is not a consideration at this point.
+
+Examples of use:
+
+    count_runs([1, 1, 2, 2, 2, 3, 4, 4, 4, 4, 4, 5, 5]) --> [2, 3, 1, 5, 2]
