@@ -10,19 +10,20 @@ Problems in this section will use recursion as an alternative to a procedural lo
 #### 1. List filtering
 
 
-Prerequisites:
+##### Prerequisites
+
  - List unpacking, e.g. `fst, *rest = list` and the like
  - Lambdas, e.g. `lambda x: x > 0`
  - Passing functions as arguments to other functions
  - Joining lists with `+`
 
-The problem
+##### The problem
 
 Write a function `list_filter(lst, pred)`, which takes a list `lst` of elements of arbitrary type, and a predicate function `pred`, which must returna boolean (`True` or `False`) on any single element of `lst`, and returns a new list, whose elements are all those of `lst` for which `pred` returns `True`.
 
 The implementation of `list_filter(lst, pred)` should use recursion, loops are not allowed. Performance is not a consideration at this point.
 
-Examples of use:
+##### Examples of use
 
     list_filter([1, 2, 3, 4, 5, 6, 7, 8], lambda x: x % 3 == 0) -->  [3, 6]
     
@@ -36,32 +37,34 @@ Examples of use:
 
 #### 2.  Lengths of runs of same elements in a list   
 
-Prerequisites
+##### Prerequisites
+
  - List unpacking, e.g. `fst, *rest = list` and the like
  - Joining lists with `+`
  - List indexing, e.g. `lst[start:]` or `lst[:end]`
  - `enumerate()` (optional)
 
 
-The problem
+##### The problem
 
 Write a function `count_runs(lst)`, which would take a list of elements (restricted for a purpose of this problem to types which 
 can be compared with `==` operator, e.g. numbers, strings, etc.), and return a list of lengths of consecutive runs of the same elements in a list.
 
 The implementation should use recursion, loops are not allowed. Performance is not a consideration at this point.
 
-Examples of use:
+##### Examples of use
 
     count_runs([1, 1, 2, 2, 2, 3, 4, 4, 4, 4, 4, 5, 5]) --> [2, 3, 1, 5, 2]
 
 
 #### 3. Positions of a sublist in a list
 
-Preprequisites
+##### Preprequisites
+
 - Joining lists with `+`
 - List indexing, e.g. `lst[start:]` or `lst[:end]`
 
-The problem
+##### The problem
 
 Write a function `sequence_position(lst, seq, start=0)` which takes a list `lst`, a sublist `seq`, and an optional `start` argument, which is the starting position of element in `lst`. It should return a list of starting positions of entries of `seq` inside `lst`.
 
@@ -69,7 +72,7 @@ The implementation should use recursion, loops are not allowed.
 
  Hint: you actually need the thrid optional argument `start` to set up the recursion, which is the main reason it appears in the function's signature in the spec.
 
-Examples of use:
+##### Examples of use
 
     sequence_position([1, 2, 2, 3, 1, 3, 5, 4, 2, 6, 7, 5, 3, 1, 3], [3,1,3]) -->   [3, 12]
 
